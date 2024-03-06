@@ -21,6 +21,7 @@ namespace Test3
 
         static void CalculateDiscount(string tipeCustomer, int rewardPoints, decimal Total_Belanja)
         {
+            //ganti pengaturan conn untuk servernya disini, saya menggunakan msql sebagai db saya
             using var connection = new SqlConnection("Server=DROIDS13;Database=TestProject;Trusted_Connection=True;TrustServerCertificate=True") ;
             decimal discount = 0;
             tipeCustomer = tipeCustomer.ToLower();
