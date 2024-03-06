@@ -55,6 +55,8 @@ namespace Test3
 
             var date = DateTime.UtcNow.ToString("yyyyMMdd");
             decimal totalPayment = Total_Belanja - discount;
+
+            //setiap kali data tertambah maka transaksi id akan naik 1 sesuai dengan running number
             var checkDataOnDb = connection.Query("Select * from Discount");
             var idTransaksi = checkDataOnDb.Count() + 1;
             var result = date + "_" +idTransaksi.ToString("D5");
